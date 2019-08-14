@@ -15,26 +15,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Viewemp
+ * Servlet implementation class Salary
  */
-@WebServlet("/Viewemp")
-public class Viewemp extends HttpServlet {
+@WebServlet("/Salary")
+public class Salary extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Viewemp() {
+    public Salary() {
         super();
         // TODO Auto-generated constructor stub
     }
 
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		PrintWriter out = response.getWriter();
-		String emp = (String)request.getAttribute("emp");
 		Connection con = null;
 		PreparedStatement st = null;
+		String emp = request.getParameter("user");
+		int salary =10000,temp;
 		try {
 			Class.forName("org.sqlite.JDBC");
 			con   = DriverManager.getConnection("jdbc:sqlite:C:/sqlite/dtproject2.db");
@@ -45,33 +49,28 @@ public class Viewemp extends HttpServlet {
 				String sql2="select * from attendance where id='"+emp+"'";
 				st=con.prepareStatement(sql2);
 				r= st.executeQuery();
-		out.println("<!DOCTYPE html>\r\n" + 
-				"<html>" + 
-				"<head>" + 
-				"	<title>assignment</title>" + 
-				"</head>" + 
-				"<link rel=\"stylesheet\" type=\"text/css\" href=\"css/tem.css\">" + 
-				"<body><form name=\"xyz\" action=\"./CalculateSal\" method=\"POST\"><div class=\"main\"><h3 style='"+"margin-left=-190%;"+"'>EMPLOYE_ID :'"+r.getString(1)+"'</h3>" + 
-				"<h4>TOTAL ATTENDANCE'"+r.getString(2)+"'</h4><button \">Calculate</button></body></html>");
-		}else {
-			out.println("<html><head>assignment</head><script>alert('"+"NOT EXIST"+  "');</script><body></body></html>");
-			response.sendRedirect("index.html");
-		}
-		
-	}catch(Exception e) {
-		System.out.println("Exception" +e.getMessage());
-	}
-	finally {
-		if(con!=null)
-			try {
-				con.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				temp=Integer.parseInt(r.getString(2));
+				for(int i=temp;i<31;i++)
+				{
+					salary = salary-323;
+				}
+				out.println("<html><head>assignment</head><body>"+salary+"</body></html>");
+			}else {
+				out.println("<html><head>assignment</head><script>alert('"+"NOT EXIST"+  "');</script><body></body></html>");
+				response.sendRedirect("index.html");
 			}
-		
-	}
-}
 
+}catch(Exception e) {
+	System.out.println("Exception" +e.getMessage());
 }
-
+finally {
+	if(con!=null)
+		try {
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+}
+	}}

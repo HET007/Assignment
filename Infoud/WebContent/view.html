@@ -1,10 +1,36 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+	<title>assignment</title>
 </head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script>
+
+function notnull() {
+var id= document.getElementById('user').value;
+var pass= document.getElementById('pass').value;		
+if(id < 1)
+	alert("Enter Id and Password");
+	// body...
+}
+function key(){
+	window.location = "http://localhost:8080/Infoud/";
+	return;
+
+}
+</script>
 <body>
 
+<form action="./Salary" method="POST">
+<div class="main">
+	<h3>Salary-Calculate</h3>
+	<h4>Employe -Id<input type="text"  Id="user" name="user" placeholder="Enter Employe-ID" ></h2>
+	
+	<button onclick="notnull()" >Submit</button>
+	<button  name="b2"  onclick="key();">Logout</button>
+	
+</div>
+</form>
 </body>
 </html>
