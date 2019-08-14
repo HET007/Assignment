@@ -54,7 +54,19 @@ public class Salary extends HttpServlet {
 				{
 					salary = salary-323;
 				}
-				out.println("<html><head>assignment</head><body>"+salary+"</body></html>");
+				out.println("<!DOCTYPE html>\r\n" + 
+						"<html>" + 
+						"<head>" + 
+						"	<title>assignment</title>" + 
+						"</head>" + "<script"+
+						"function key(){\r\n" + 
+						"	window.location = \"http://localhost:8080/Infoud/\";\r\n" + 
+						"	return;\r\n" + 
+						"\r\n" + 
+						"}\r\n" + 
+						"</script><link rel=\"stylesheet\" type=\"text/css\" href=\"css/tem.css\">" + 
+						"<body><form name=\"xyz\" action=\"index.html\" method=\"POST\"><div class=\"main\"><h3 style='"+"margin-left=-190%;"+"'>EMPLOYE_Salary :"+salary+"</h3>" + 
+						"<button name=\"b2\"  onclick=\"key();\"\">Logout</button></body></html>");
 			}else {
 				out.println("<html><head>assignment</head><script>alert('"+"NOT EXIST"+  "');</script><body></body></html>");
 				response.sendRedirect("index.html");
