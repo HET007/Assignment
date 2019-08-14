@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assignment</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script>
+
+function notnull() {
+var id= document.getElementById('user').value;
+var pass= document.getElementById('pass').value;		
+if(id < 1 || pass <1)
+	alert("Enter Id and Password");
+	// body...
+}
+</script>
+<body>
+
+<form action="./Auth" method="POST">
+<div class="main">
+	<h3>Login Page</h3>
+	<h4>USER-ID<input type="text" Id="user" name="user" placeholder="Enter User-id" ></h2>
+	<h4>Password<input type="PASSWORD" Id="pass" name="pass" placeholder="Enter Password"></h2>
+	<button onclick="notnull()" >Submit</button>
+	
+</div>
+</form>
+</body>
+</html>

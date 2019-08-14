@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employe</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/admin.css">
+
+<body>
+<script>
+function keyclick(){
+	document.xyz.b2.disabled=true;
+
+}
+function key(){
+	window.location = "http://localhost:8080/Infoud/";
+	return;
+
+}
+</script>
+	<form name="xyz" action="./Crudopration" method="POST">
+	<div class="main"> 
+	<h4>Admin</h4>
+	<div class="attendance">
+	<div class="emp">
+	Employe-ID<input type="text" id="user" name="empid" placeholder="Enter Employe id"></div><br/>
+	ADD<input type="radio"	id="1" name="crud" value="1">
+	UPDATE<input type="radio" id="2" name="crud" value="2">
+	DELETE<input type="radio" id="3" name="crud" value="3">
+	VIEW<input type="radio" id="4" name="crud" value="4">
+	<button onclick="keyclick();">SUBMIT</button>
+	<button  name="b2"  onclick="key();">Logout</button>
+	<br/>
+	</div>
+	</div>
+	</form>
+</body>
+</html>

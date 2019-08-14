@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assignment</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<body>
+	<script>
+
+function notnull() {
+var id= document.getElementById('user').value;
+var pass= document.getElementById('usern').value;		
+if(id < 1 || pass <1)
+	alert("FEEL PROPERLY");
+	// body...
+}
+</script>
+
+<form action="./UpdateEmp" method="POST">
+<div class="main">
+	<h3>Admin</h3>
+	<h4>Employe-ID<input type="text" Id="user" name="emp" placeholder="Enter Employe-ID" ></h2>
+	<h4>Employe-NEW-ID<input type="text" Id="usern" name="empn" placeholder="Enter Employe new ID"></h2>
+	<button onclick="notnull()" >Submit</button>
+	
+</div>
+</form>
+</body>
+</html>

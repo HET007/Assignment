@@ -1,0 +1,31 @@
+
+body
+{
+	margin: 0%;
+	padding: 0%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	margin-top: 12%;
+	margin-left: 33%;
+	margin-right: 33%;
+	border:1px solid;
+	
+
+}
+.main
+{
+
+	margin-left: 28%;
+
+}
+.main h3
+{
+margin-top: -8px;
+margin-bottom: 5px;
+margin-left: 0px;
+}
+
+.main input
+{
+	margin-left: 10px;
+}
