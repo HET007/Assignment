@@ -1,4 +1,7 @@
 # Assignment
+
+Note:- admin id & password is root,root 
+
 Admin Portal Using Java,sqlite
 Admin wants are listed in the database they can login using there password && id
 
